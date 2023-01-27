@@ -1,3 +1,15 @@
 [build]
   publish = "_site"
   command = "DEBUG=* eleventy"
+  
+[[redirects]]
+  from = "https://www.*"
+  to = "https://www.:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://*"
+  to = "https://:splat"
+  status = 301
+  force = true
